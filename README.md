@@ -9,6 +9,6 @@ Start by issuing ```sbt run``` from within the root folder. The play server is l
 
 ```GET /messages/new/Luke``` fetches only new messages for Luke
 
-```GET /messages/Luke?start=0&stop=5``` fetches old and new messages for Luke. Query parameters start and stop are possible. Default start = 0, stop = 5
+```GET /messages/Luke?start=0&stop=5``` fetches old and new messages for Luke. Query parameters start and stop optional, defaults to 0 and 5.
 
 ```DELETE /messages?id=1,2,3``` removes messages with id 1, 2 and 3.
