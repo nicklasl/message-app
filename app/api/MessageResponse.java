@@ -10,6 +10,9 @@ public class MessageResponse {
     private String text;
 
     public static MessageResponse constructFromMessage(Message message) {
+        if(message == null) {
+            return null;
+        }
         return new MessageResponse(message);
     }
 
@@ -50,5 +53,21 @@ public class MessageResponse {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MessageResponse that = (MessageResponse) o;
+
+        return id.equals(that.id);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
     }
 }
