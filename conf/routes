@@ -1,0 +1,8 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /messages/new/:recipient                controllers.MessageController.listNew(recipient:String)
+GET     /messages/:recipient                    controllers.MessageController.list(recipient:String, start:Integer ?= 0, stop:Integer ?= 5)
+POST    /messages                               controllers.MessageController.send()
+DELETE  /messages                               controllers.MessageController.remove(id:String)
